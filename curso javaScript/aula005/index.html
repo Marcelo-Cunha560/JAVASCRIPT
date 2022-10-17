@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <Style>
+        body{
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt arial;
+            
+        }
+    </Style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprenderemos a usar o <strong>DOM</strong> em jabaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script> /* Documento object Model = 
+    Conjunto de documentos dentro no navegador.*/
+        /*arvore dom = window >> 
+        location
+        document >> html >> head / body
+        history
+        Exemplo: 
+         window.document.write(window.navigator.appName)
+
+         Podemos selecionar qualquer elemento DOM pelas seguintes categorias:
+         1) Marca: getElementByTagName() >> pela tag
+
+         2)Pelo ID: getElementsById
+
+         3) Por Nome: getElementsByName
+
+         4) Por classe: getElementsByClassName
+
+         5)Por seletor: querySelector()
+                        querySelectorAll()
+        */
+       var p1 = window.document.getElementsByTagName('p')[0]
+       window.document.write('Está escrito assim: ' + p1.innerText)
+
+       /* Exemplo DOM por seletor*/
+       var d = window.document.querySelector('div#msg')
+       d.style.color = 'yellow'
+    </script>  
+</body>
+</html>
